@@ -7,7 +7,15 @@ import navs from "../lib/navs";
 
 const Header = () => {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isMenu, setIsMenu] = useState(false);
 
+  const openMenu = () => {
+    setIsMenu(true);
+  };
+
+  const closeMenu = () => {
+    setIsMenu(false);
+  };
   return (
     <div>
       {/* mobile header */}
@@ -17,7 +25,7 @@ const Header = () => {
         </div>
         <hr className="hidden md:block absolute left-[167px] z-10 bg-white opacity-[0.25] mix-blend-normal w-[473px]" />
         <div className="right">
-          <div className="img md:hidden">
+          <div className="img md:hidden" onClick={openMenu}>
             <img src={Hamburger} alt="hamburger" />
           </div>
           <div className="lists hidden  right-0 bg-header-bg backdrop-blur-2xl md:flex md:unset">
@@ -46,8 +54,14 @@ const Header = () => {
           </div>
 
           {/* mobile */}
-          <div className="lists pt-8 px-7 fixed top-0 right-0 w-2/3 z-10 h-full  bg-header-bg backdrop-blur-2xl md:hidden">
-            <span className="flex justify-end">
+          <div
+            className={
+              isMenu
+                ? "lists  pt-8 px-7 fixed top-0 right-0 w-2/3 z-10 h-full  bg-header-bg backdrop-blur-2xl md:hidden"
+                : "hidden"
+            }
+          >
+            <span className="flex justify-end" onClick={closeMenu}>
               <img src={Close} alt="close" />
             </span>
             <ul className="flex flex-col uppercase gap-8   text-white text-base font-barlow   ">

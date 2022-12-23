@@ -21,22 +21,24 @@ const Header = () => {
             <img src={Hamburger} alt="hamburger" />
           </div>
           <div className="lists bg-header-bg backdrop-blur-2xl hidden md:flex">
-            <ul className="flex uppercase gap-12 p-6 text-white text-base font-barlow pr-[125px] pl-[123px] ">
+            <ul className="flex uppercase gap-12 p-6 h-[96px] text-white text-base font-barlow pr-[125px] pl-[123px] ">
               {navs.map((item, index) => (
                 <li
                   className={
                     currentPage === `${item}`
-                      ? `border-b-2 `
+                      ? `border-b-2 pb-[70px]`
                       : "flex gap-3 cursor-pointer "
                   }
                   key={index}
                 >
                   {" "}
                   <Link
+                    className="flex gap-3"
                     onClick={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >
-                    <span className="font-bold"> 0{index}</span> {item}
+                    <span className="font-bold"> 0{index}</span>
+                    <p>{item}</p>
                   </Link>
                 </li>
               ))}

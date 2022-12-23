@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/shared/logo.svg";
 import Hamburger from "../assets/shared/icon-hamburger.svg";
 import Close from "../assets/shared/icon-close.svg";
-
+import { Link } from "react-router-dom";
 import navs from "../lib/navs";
+
 const Header = () => {
+  const [currentPage, setCurrentPage] = useState("home");
+
   return (
     <div>
       {/* mobile header */}
@@ -20,9 +23,21 @@ const Header = () => {
           <div className="lists bg-header-bg backdrop-blur-2xl hidden md:flex">
             <ul className="flex uppercase gap-12 p-6 text-white text-base font-barlow pr-[125px] pl-[123px] ">
               {navs.map((item, index) => (
-                <li className="flex gap-3 cursor-pointer" key={index}>
+                <li
+                  className={
+                    currentPage === `${item}`
+                      ? `border-b-2 `
+                      : "flex gap-3 cursor-pointer "
+                  }
+                  key={index}
+                >
                   {" "}
-                  <span className="font-bold"> 0{index}</span> {item}
+                  <Link
+                    onClick={() => setCurrentPage(`${item}`)}
+                    to={`/${item}`}
+                  >
+                    <span className="font-bold"> 0{index}</span> {item}
+                  </Link>
                 </li>
               ))}
             </ul>

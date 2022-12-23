@@ -1,2 +1,2 @@
-const navs = ["home", "destination", "crew", "tecnology"];
+const navs = ["home", "destination", "crew", "technology"];
 export default navs;

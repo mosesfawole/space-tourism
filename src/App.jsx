@@ -6,7 +6,7 @@ import Crews from "./pages/Crews";
 import Technology from "./pages/Technology";
 const App = () => {
   return (
-    <div className="bg-mobile md:bg-desktop sm:bg-tablet bg-cover bg-center">
+    <div className="h-[100vh] bg-mobile md:bg-desktop sm:bg-tablet bg-cover bg-center">
       <Header />
 
       <Routes>

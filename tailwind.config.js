@@ -2,9 +2,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    // screens: {
-    //   // xs: "400px",
-    // },
+    screens: {
+      sm: "600px",
+      md: "768px",
+    },
     fontFamily: {
       bellefair: ["Bellefair", "serif"],
       barlow: ["Barlow Condensed", "sans-serif"],

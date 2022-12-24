@@ -1,4 +1,4 @@
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Destinations from "./pages/Destinations";
@@ -10,15 +10,13 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<HomePage />} />
 
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/destination" element={<Destinations />} />
         <Route path="/crew" element={<Crews />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>
-
-      <Home />
     </div>
   );
 };

@@ -41,7 +41,7 @@ const Header = () => {
                 >
                   {" "}
                   <Link
-                    className="flex gap-3"
+                    className="flex gap-3  mt-3"
                     onClick={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >

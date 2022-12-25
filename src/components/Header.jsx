@@ -5,7 +5,7 @@ import Close from "../assets/shared/icon-close.svg";
 import { Link } from "react-router-dom";
 import navs from "../lib/navs";
 
-const Header = () => {
+const Header = (props) => {
   const [currentPage, setCurrentPage] = useState("home");
   const [isMenu, setIsMenu] = useState(false);
 
@@ -17,7 +17,7 @@ const Header = () => {
     setIsMenu(false);
   };
   return (
-    <div>
+    <div style={{ bgImage: `url(${props.bgImage})` }}>
       {/* mobile header */}
       <div className=" flex justify-between items-center p-6 md:p-0 md:pt-10  ">
         <div className="left md:px-6">
@@ -57,14 +57,14 @@ const Header = () => {
           <div
             className={
               isMenu
-                ? "lists  pt-8 px-7 fixed top-0 right-0 w-2/3 z-10 h-full  bg-header-bg backdrop-blur-2xl md:hidden"
+                ? "lists  pt-8 px-7 fixed top-0 right-0 w-[70%] z-10 h-full  bg-header-bg backdrop-blur-2xl md:hidden"
                 : "hidden"
             }
           >
             <span className="flex justify-end" onClick={closeMenu}>
               <img src={Close} alt="close" />
             </span>
-            <ul className="flex flex-col uppercase gap-8   text-white text-base font-barlow   ">
+            <ul className="flex flex-col uppercase gap-8 mt-16   text-white text-base font-barlow   ">
               {navs.map((item, index) => (
                 <li
                   className={

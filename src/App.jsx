@@ -4,12 +4,13 @@ import Header from "./components/Header";
 import Destinations from "./pages/Destinations";
 import Crews from "./pages/Crews";
 import Technology from "./pages/Technology";
-const App = () => {
-  return (
-    <div className="h-[100vh] bg-mobile md:bg-desktop sm:bg-tablet bg-cover bg-center">
-      <Header />
+import { useState } from "react";
 
+const App = (props) => {
+  return (
+    <div className="">
       <Routes>
+        {/* <Route path="*" element={} /> */}
         <Route exact path="/" element={<HomePage />} />
 
         <Route path="/home" element={<HomePage />} />

@@ -15,6 +15,12 @@ module.exports = {
         desktop: "url('/src/assets/home/background-home-desktop.jpg')",
         mobile: "url('/src/assets/home/background-home-mobile.jpg')",
         tablet: "url('/src/assets/home/background-home-tablet.jpg')",
+        desktopDestination:
+          "url('/src/assets/destination/background-destination-desktop.jpg')",
+        mobileDestination:
+          "url('/src/assets/destination/background-destination-mobile.jpg')",
+        tabletDestination:
+          "url('/src/assets/destination/background-destination-tablet.jpg')",
       },
 
       colors: {

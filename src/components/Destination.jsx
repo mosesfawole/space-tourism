@@ -9,7 +9,7 @@ const Destination = () => {
   return (
     <>
       <section>
-        <div className="md:flex items-center justify-center gap-40">
+        <div className="flex flex-col   md:flex-row items-center justify-center md:gap-40">
           <div className="top flex flex-col gap-8 justify-center items-center md:items-start  ">
             <div className="font-barlow text-white flex items-center gap-4  ">
               <p className="font-bold tracking-[2.7px] opacity-[0.25]">01</p>
@@ -21,7 +21,7 @@ const Destination = () => {
           </div>
 
           <div className="details mt-7">
-            <ul className="flex justify-center items-center gap-7">
+            <ul className="flex justify-center items-center gap-7 ">
               {planets.map((item, index) => (
                 <li
                   className="font-barlow text-sm text-[#D0D6F9] tracking-[2.4px]"
@@ -47,9 +47,11 @@ const Destination = () => {
                 {description}
               </p>
             </div>
-            <hr className="bg-[#383B4B]  mt-8 mb-8 " />
+            <div className="mt-8">
+              <hr className="bg-[#383B4B] w-[327px] mx-auto " />
+            </div>
 
-            <ul className="text-center flex flex-col gap-8 p-4">
+            <ul className="text-center flex flex-col gap-8 p-4 mt-8">
               <li className="text-[#D0D6F9] font-barlow text-sm uppercase tracking-wider">
                 Avg. Distance{" "}
                 <p className="font-bellefair mt-3 text-[28px] leading-8 text-white">

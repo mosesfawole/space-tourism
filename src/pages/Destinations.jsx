@@ -7,7 +7,6 @@ const Destinations = () => {
     <div className="bg-mobileDestination sm:bg-tabletDestination md:bg-desktopDestination">
       <Header />
       <Destination />
-      //{" "}
     </div>
   );
 };

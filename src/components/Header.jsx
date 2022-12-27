@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import navs from "../lib/navs";
 
 const Header = (props) => {
-  const [currentPage, setCurrentPage] = useState("home");
+  const [currentPage, setCurrentPage] = useState("/");
   const [isMenu, setIsMenu] = useState(false);
 
   const openMenu = () => {

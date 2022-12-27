@@ -9,22 +9,26 @@ const Destination = () => {
   return (
     <>
       <section>
-        <div className="flex flex-col   md:flex-row items-center justify-center md:gap-40">
-          <div className="top flex flex-col gap-8 justify-center items-center md:items-start  ">
-            <div className="font-barlow text-white flex items-center gap-4  ">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center md:mt-20      ">
+          <div className="top flex flex-col gap-8 items-center sm:items-start ">
+            <div className="font-barlow  text-white flex  gap-4  md:pl-16">
               <p className="font-bold tracking-[2.7px] opacity-[0.25]">01</p>
-              <p className=" text-base uppercase tracking-[2.7px]">
+              <p className="text-base sm:text-[20px] sm:leading-6  uppercase tracking-[2.7px] ">
                 Pick your destination
               </p>
             </div>
-            <img className="w-1/2 md:w-auto" src={images.webp} alt={name} />
+            <img
+              className="w-1/2 md:w-auto  md:mt-7 mx-auto"
+              src={images.webp}
+              alt={name}
+            />
           </div>
 
-          <div className="details mt-7">
-            <ul className="flex justify-center items-center gap-7 ">
+          <div className="details mt-7 md:w-4/5">
+            <ul className="flex justify-center items-center gap-7 md:justify-start  ">
               {planets.map((item, index) => (
                 <li
-                  className="font-barlow text-sm text-[#D0D6F9] tracking-[2.4px]"
+                  className="font-barlow text-sm sm:text-base sm:leading-5 text-[#D0D6F9] tracking-[2.4px]"
                   key={index}
                 >
                   <button
@@ -39,19 +43,17 @@ const Destination = () => {
               ))}
             </ul>
 
-            <div className="text-center p-4">
-              <h2 className="font-bellefair font-normal text-white uppercase  mt-5 text-[56px] leading-[64px] ">
+            <div className="text-center p-4 md:p-0 md:text-start">
+              <h2 className="font-bellefair font-normal text-white uppercase  mt-5 text-[56px]  leading-[64px] sm:text-[80px] sm:leading-[92px] md:text-[100px] md:leading-[114px] ">
                 {name}
               </h2>
-              <p className=" px-6 font-barlow text-[15px] leading-[25px] text-[#D0D6F9]  ">
+              <p className=" px-6 md:px-0 font-barlow text-[15px] leading-[25px] text-[#D0D6F9] sm:text-base sm:leading-7 md:text-xl md:leading-8 ">
                 {description}
               </p>
             </div>
-            <div className="mt-8">
-              <hr className="bg-[#383B4B] w-[327px] mx-auto " />
-            </div>
+            <div className="mt-8 bg-[#383B4B] h-[1px] w-[80%] mx-auto md:w-full "></div>
 
-            <ul className="text-center flex flex-col gap-8 p-4 mt-8">
+            <ul className="text-center flex flex-col sm:flex-row md:text-start md:flex-row justify-center md:justify-start sm:p-0 items-center   gap-8 p-4 mt-8">
               <li className="text-[#D0D6F9] font-barlow text-sm uppercase tracking-wider">
                 Avg. Distance{" "}
                 <p className="font-bellefair mt-3 text-[28px] leading-8 text-white">

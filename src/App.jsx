@@ -9,6 +9,7 @@ import { useState } from "react";
 const App = (props) => {
   return (
     <div className="">
+      {/* <Header /> */}
       <Routes>
         {/* <Route path="*" element={} /> */}
         <Route exact path="/" element={<HomePage />} />

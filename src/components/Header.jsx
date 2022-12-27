@@ -5,7 +5,7 @@ import Close from "../assets/shared/icon-close.svg";
 import { Link } from "react-router-dom";
 import navs from "../lib/navs";
 
-const Header = (props) => {
+const Header = () => {
   const [currentPage, setCurrentPage] = useState("/");
   const [isMenu, setIsMenu] = useState(false);
 
@@ -17,7 +17,7 @@ const Header = (props) => {
     setIsMenu(false);
   };
   return (
-    <div style={{ bgImage: `url(${props.bgImage})` }}>
+    <div className="header">
       {/* mobile header */}
       <div className=" flex justify-between items-center p-6 md:p-0 md:pt-10  ">
         <div className="left md:px-6">

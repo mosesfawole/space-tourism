@@ -34,7 +34,7 @@ const Crew = () => {
                 </li>
               ))}
             </ul>
-            <div className="details text-center">
+            <div className="details text-center mt-8">
               <div className="role">
                 <p className="font-bellefair  text-base leading-4 opacity-[0.5]">
                   {role}

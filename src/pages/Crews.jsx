@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Crews = () => {
   return (
-    <div className="bg-mobileCrew sm:bg-tabletCrew md:bg-desktopCrew  bg-cover bg-center">
+    <div className="bg-mobileCrew sm:bg-tabletCrew md:bg-desktopCrew  bg-cover bg-center min-h-screen">
       <Header />
       <Crew />
     </div>

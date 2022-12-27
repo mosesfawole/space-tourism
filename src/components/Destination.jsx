@@ -10,7 +10,7 @@ const Destination = () => {
     <>
       <section>
         <div className="flex flex-col md:grid md:grid-cols-2 md:items-center md:mt-20      ">
-          <div className="top flex flex-col gap-8 items-center sm:items-start ">
+          <div className="top flex flex-col gap-8 items-center md:items-start ">
             <div className="font-barlow  text-white flex  gap-4  md:pl-16">
               <p className="font-bold tracking-[2.7px] opacity-[0.25]">01</p>
               <p className="text-base sm:text-[20px] sm:leading-6  uppercase tracking-[2.7px] ">
@@ -51,7 +51,7 @@ const Destination = () => {
                 {description}
               </p>
             </div>
-            <div className="mt-8 bg-[#383B4B] h-[1px] w-[80%] mx-auto md:w-full "></div>
+            <div className="mt-3 bg-[#383B4B] h-[1px] w-[80%] mx-auto md:w-full "></div>
 
             <ul className="text-center flex flex-col sm:flex-row md:text-start md:flex-row justify-center md:justify-start sm:p-0 items-center   gap-8 p-4 mt-8">
               <li className="text-[#D0D6F9] font-barlow text-sm uppercase tracking-wider">

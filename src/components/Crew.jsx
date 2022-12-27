@@ -17,7 +17,15 @@ const Crew = () => {
               </div>
             </div>
           </div>
+
           <div className="bottom">
+            <ul>
+              {crews.map((item, index) => (
+                <li key={index}>
+                  <button>{item.name}</button>
+                </li>
+              ))}
+            </ul>
             <div className="role">
               <p>{role}</p>
             </div>

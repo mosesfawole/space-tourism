@@ -1,7 +1,10 @@
-import React from "react";
-
+import React, { useState } from "react";
+import data from "../lib/data.json";
 const Crew = () => {
-  return <div>Crew</div>;
+  const [crews] = useState(data.crew);
+  const [value, setValue] = useState(0);
+  const { name, images, role, bio } = crews[value];
+  return <div></div>;
 };
 
 export default Crew;

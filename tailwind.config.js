@@ -24,6 +24,12 @@ module.exports = {
         desktopCrew: "url('/src/assets/crew/background-crew-desktop.jpg')",
         tabletCrew: "url('/src/assets/crew/background-crew-tablet.jpg')",
         mobileCrew: "url('/src/assets/crew/background-crew-mobile.jpg')",
+        desktopTech:
+          "url('/src/assets/technology/background-technology-desktop.jpg')",
+        tabletTech:
+          "url('/src/assets/technology/background-technology-tablet.jpg')",
+        mobileTech:
+          "url('/src/assets/technology/background-technology-mobile.jpg')",
       },
 
       colors: {

@@ -8,7 +8,7 @@ const Tech = () => {
   return (
     <div>
       <div className="">
-        <div className="top">
+        <div className="top flex flex-col gap-8">
           <div className="flex justify-center items-center title font-barlow text-white gap-4 md:pl-8 ">
             <p className="font-bold tracking-[2.7px] opacity-[0.25]">03</p>
             <p className="sm:text-[20px] sm:leading-6  uppercase tracking-[2.7px] ">
@@ -24,10 +24,17 @@ const Tech = () => {
           <ul>
             {technologies.map((item, index) => (
               <li key={index}>
-                <button className="text-white">{index}</button>
+                <button className="text-white">{item.id}</button>
               </li>
             ))}
           </ul>
+          <div className="details">
+            <div className="top">
+              <p>the tecnologies ...</p>
+            </div>
+            <div className="">{name}</div>
+            <div className="">{description}</div>
+          </div>
         </div>
       </div>
     </div>

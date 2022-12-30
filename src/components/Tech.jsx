@@ -20,17 +20,24 @@ const Tech = () => {
             <img className="hidden md:flex" src={images.portrait} alt={name} />
           </div>
         </div>
-        <div className="bottom">
-          <ul>
+        <div className="bottom mt-9">
+          <ul className="flex justify-center items-center gap-4">
             {technologies.map((item, index) => (
               <li key={index}>
-                <button className="text-white">{item.id}</button>
+                <button
+                  onClick={() => setValue(index)}
+                  className={`font-bellefair text-base leading-4 text-white w-10 h-10 rounded-full border border-[#2b2e36] 
+                  ${index === value && "bg-white text-black"}
+                        `}
+                >
+                  {item.id}
+                </button>
               </li>
             ))}
           </ul>
           <div className="details">
             <div className="top">
-              <p>the tecnologies ...</p>
+              <p>the technologies ...</p>
             </div>
             <div className="">{name}</div>
             <div className="">{description}</div>

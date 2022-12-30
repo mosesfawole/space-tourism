@@ -21,7 +21,7 @@ const Tech = () => {
           </div>
         </div>
         <div className="bottom mt-9">
-          <ul className="flex justify-center items-center gap-4">
+          <ul className="flex justify-center items-center gap-4 mb-4">
             {technologies.map((item, index) => (
               <li key={index}>
                 <button
@@ -35,12 +35,22 @@ const Tech = () => {
               </li>
             ))}
           </ul>
-          <div className="details">
-            <div className="top">
-              <p>the technologies ...</p>
+          <div className="details flex flex-col justify-center items-center text-center p-6">
+            <div className="top mb-4">
+              <p className="font-barlow text-sm text-[#D0D6F9] uppercase leading-[2.36px]">
+                the technology ...
+              </p>
             </div>
-            <div className="">{name}</div>
-            <div className="">{description}</div>
+            <div className="mb-4">
+              <p className="font-bellefair text-2xl leading-7 uppercase text-white">
+                {name}
+              </p>
+            </div>
+            <div className="">
+              <p className="text-[15px] leading-6 text-[#D0D6F9]">
+                {description}
+              </p>
+            </div>
           </div>
         </div>
       </div>

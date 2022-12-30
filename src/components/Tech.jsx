@@ -20,7 +20,15 @@ const Tech = () => {
             <img className="hidden md:flex" src={images.portrait} alt={name} />
           </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <ul>
+            {technologies.map((item, index) => (
+              <li key={index}>
+                <button className="text-white">{index}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

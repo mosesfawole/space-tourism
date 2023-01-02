@@ -6,7 +6,7 @@ import Crews from "./pages/Crews";
 import Technology from "./pages/Technology";
 import { useEffect, useState } from "react";
 
-const App = (props) => {
+const App = () => {
   const { pathname } = useLocation();
 
   const [currentPage, setCurrentPage] = useState("/");

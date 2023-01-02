@@ -9,7 +9,7 @@ const Destination = () => {
   return (
     <>
       <section>
-        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center md:mt-20      ">
+        <div className="flex flex-col md:grid md:grid-cols-2   md:mt-20      ">
           <div className="top flex flex-col gap-8 items-center md:items-start ">
             <div className="font-barlow  text-white flex  gap-4  md:pl-16">
               <p className="font-bold tracking-[2.7px] opacity-[0.25]">01</p>

@@ -3,6 +3,14 @@ import data from "../lib/data.json";
 const Crew = () => {
   const [crews] = useState(data.crew);
   const [value, setValue] = useState(0);
+
+  const [mobileBg, setMobileBg] = useState(
+    "url('/src/assets/crew/background-crew-mobile.jpg)"
+  );
+  const [desktopBg, setDesktopBg] = useState(
+    "url('/src/assets/crew/background-crew-desktop.jpg)"
+  );
+
   const { name, images, role, bio } = crews[value];
   return (
     <div>
@@ -17,7 +25,7 @@ const Crew = () => {
             </div>
             <div className="">
               <img
-                className=" h-[227px] mx-auto md:w-full md:h-auto "
+                className="aspect-square object-contain mx-auto md:w-full md:h-auto "
                 src={images.webp}
                 alt={name}
               />

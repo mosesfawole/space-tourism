@@ -35,7 +35,7 @@ const Header = () => {
                   className={
                     currentPage === `${item}`
                       ? `border-b-2 pb-[70px]`
-                      : "flex gap-3 cursor-pointer "
+                      : "flex gap-3 cursor-pointer  "
                   }
                   key={index}
                 >

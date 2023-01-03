@@ -4,13 +4,6 @@ const Crew = () => {
   const [crews] = useState(data.crew);
   const [value, setValue] = useState(0);
 
-  const [mobileBg, setMobileBg] = useState(
-    "url('/src/assets/crew/background-crew-mobile.jpg)"
-  );
-  const [desktopBg, setDesktopBg] = useState(
-    "url('/src/assets/crew/background-crew-desktop.jpg)"
-  );
-
   const { name, images, role, bio } = crews[value];
   return (
     <div>
@@ -53,7 +46,7 @@ const Crew = () => {
               ))}
             </ul>
             <div className="details text-center mt-8 px-6 md:text-left">
-              <div className="role">
+              <div className="role ">
                 <p className="font-bellefair text-white  text-base uppercase leading-4 md:text-3xl opacity-[0.5]">
                   {role}
                 </p>

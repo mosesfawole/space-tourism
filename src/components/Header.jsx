@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/shared/logo.svg";
 import Hamburger from "../assets/shared/icon-hamburger.svg";
 import Close from "../assets/shared/icon-close.svg";
@@ -35,7 +35,7 @@ const Header = () => {
                   className={
                     currentPage === `${item}`
                       ? `border-b-2 pb-[70px]`
-                      : "flex gap-3 cursor-pointer  "
+                      : "flex gap-3  "
                   }
                   key={index}
                 >
@@ -43,6 +43,7 @@ const Header = () => {
                   <Link
                     className="flex gap-3  mt-3"
                     onClick={() => setCurrentPage(`${item}`)}
+                    onLoad={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >
                     <span className="font-bold"> 0{index}</span>

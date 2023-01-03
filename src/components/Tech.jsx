@@ -43,13 +43,13 @@ const Tech = () => {
               ))}
             </ul>
           </div>
-          <div className="details flex flex-col justify-center items-center text-center md:text-left md:items-start  p-6 md:basis-[55%]  ">
-            <div className="top mb-4">
+          <div className="details flex flex-col justify-center gap-4  items-center text-center md:text-left md:items-start  p-6 md:basis-[55%]  ">
+            <div className="top ">
               <p className="font-barlow text-sm text-[#D0D6F9] uppercase leading-[2.36px] sm:text-base sm:leading-5 md:text-base md:leading-5">
                 the terminology...
               </p>
             </div>
-            <div className="mb-4">
+            <div className="">
               <p className="font-bellefair text-2xl leading-7 uppercase text-white text-[40px] sm:leading-[46px] md:text-[56px] md:leading-[64px]">
                 {name}
               </p>

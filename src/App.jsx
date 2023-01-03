@@ -24,7 +24,7 @@ const App = () => {
     if (pathname === "/technology") {
       setCurrentPage("technology");
     }
-  }, [pathname]);
+  }, []);
   return (
     <div
       className={

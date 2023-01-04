@@ -14,6 +14,7 @@ const Header = () => {
   useEffect(() => {
     setCurrentPage(pathname);
   }, [pathname]);
+
   const openMenu = () => {
     setIsMenu(true);
   };
@@ -26,14 +27,14 @@ const Header = () => {
     <div className="header">
       {/* mobile header */}
       <div className=" flex justify-between items-center p-6 md:p-0 md:pt-10  ">
-        <div className="left md:hidden md:px-6 cursor-pointer">
-          <Link to="/">
+        <div className="left md: md:px-6 cursor-pointer">
+          <Link to="/home">
             <img loading="lazy" src={Logo} alt="logo" />
           </Link>
         </div>
-        <div className="left hidden md:flex md:px-6 ">
+        {/* <div className="left hidden md:flex md:px-6 ">
           <img loading="lazy" src={Logo} alt="logo" />
-        </div>
+        </div> */}
         <hr className="hidden md:block absolute left-[167px] z-10 bg-white opacity-[0.25] mix-blend-normal w-[473px]" />
         <div className="right">
           <div className="img md:hidden" onClick={openMenu}>

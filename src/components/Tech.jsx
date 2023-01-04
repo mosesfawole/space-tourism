@@ -18,8 +18,14 @@ const Tech = () => {
       <div className="md:flex md:flex-row md:items-">
         <div className="top flex flex-col  ">
           <div className="i">
-            <img className="md:hidden" src={images.landscape} alt={name} />
             <img
+              loading="lazy"
+              className="md:hidden"
+              src={images.landscape}
+              alt={name}
+            />
+            <img
+              loading="lazy"
               className="hidden md:flex w-full h-auto"
               src={images.portrait}
               alt={name}

@@ -6,9 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import navs from "../lib/navs";
 
 const Header = () => {
-  const { pathname } = useLocation();
   const [currentPage, setCurrentPage] = useState("/");
-  const [style, setStyle] = useState(false);
 
   const [isMenu, setIsMenu] = useState(false);
 
@@ -20,20 +18,18 @@ const Header = () => {
     setIsMenu(false);
   };
 
-  useEffect(() => {
-    currentPage;
-  }, []);
+  useEffect(() => {}, [currentPage]);
   return (
     <div className="header">
       {/* mobile header */}
       <div className=" flex justify-between items-center p-6 md:p-0 md:pt-10  ">
         <div className="left md:px-6">
-          <img src={Logo} alt="logo" />
+          <img loading="lazy" src={Logo} alt="logo" />
         </div>
         <hr className="hidden md:block absolute left-[167px] z-10 bg-white opacity-[0.25] mix-blend-normal w-[473px]" />
         <div className="right">
           <div className="img md:hidden" onClick={openMenu}>
-            <img src={Hamburger} alt="hamburger" />
+            <img loading="lazy" src={Hamburger} alt="hamburger" />
           </div>
           <div className="lists hidden  right-0 bg-header-bg backdrop-blur-2xl md:flex md:unset">
             <ul className="flex uppercase gap-12 p-6 h-[96px] text-white text-base font-barlow pr-[125px] pl-[123px] ">
@@ -69,7 +65,7 @@ const Header = () => {
             }
           >
             <span className="flex justify-end" onClick={closeMenu}>
-              <img src={Close} alt="close" />
+              <img loading="lazy" src={Close} alt="close" />
             </span>
             <ul className="flex flex-col uppercase gap-8 mt-16   text-white text-base font-barlow   ">
               {navs.map((item, index) => (

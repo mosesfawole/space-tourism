@@ -24,7 +24,7 @@ const App = () => {
     if (pathname === "/technology") {
       setCurrentPage("technology");
     }
-  }, []);
+  }, [pathname]);
   return (
     <div
       className={
@@ -44,7 +44,7 @@ const App = () => {
         {/* <Route path="*" element={} /> */}
         <Route exact path="/" element={<HomePage />} />
 
-        <Route path="/home" element={<HomePage />} />
+        <Route exact path="/home" element={<HomePage />} />
         <Route path="/destination" element={<Destinations />} />
         <Route path="/crew" element={<Crews />} />
         <Route path="/technology" element={<Technology />} />

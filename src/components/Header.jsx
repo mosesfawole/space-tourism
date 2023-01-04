@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import navs from "../lib/navs";
 
 const Header = () => {
+  const { pathname } = useLocation();
   const [currentPage, setCurrentPage] = useState("/");
 
   const [isMenu, setIsMenu] = useState(false);
@@ -18,7 +19,14 @@ const Header = () => {
     setIsMenu(false);
   };
 
-  useEffect(() => {}, [currentPage]);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  // useEffect(() => {
+  //   if (pathname) {
+  //     setCurrentPage(currentPage);
+  //   }
+  // }, [currentPage]);
   return (
     <div className="header">
       {/* mobile header */}
@@ -50,8 +58,8 @@ const Header = () => {
                   {" "}
                   <Link
                     className="flex gap-3  mt-3"
-                    onClick={() => setCurrentPage(`${item}`)}
-                    onChange={() => setCurrentPage(`${item}`)}
+                    onClick={() => handlePageChange(`${item}`)}
+                    // onChange={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >
                     <span className="font-bold"> 0{index}</span>

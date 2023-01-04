@@ -53,7 +53,7 @@ const Crew = () => {
                 </p>
               </div>
               <div className="name mt-2 mb-4">
-                <p className="font-bellefair text-2xl leading-7 text-white uppercase md:text-[56px] md:leading-[64px]    ">
+                <p className="font-bellefair text-2xl leading-7 text-white uppercase md:text-[46px] md:leading-[64px]    ">
                   {name}
                 </p>
               </div>

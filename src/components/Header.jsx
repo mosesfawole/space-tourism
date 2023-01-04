@@ -7,10 +7,13 @@ import navs from "../lib/navs";
 
 const Header = () => {
   const { pathname } = useLocation();
-  const [currentPage, setCurrentPage] = useState("/");
+  const [currentPage, setCurrentPage] = useState(pathname);
 
   const [isMenu, setIsMenu] = useState(false);
 
+  useEffect(() => {
+    setCurrentPage(pathname);
+  }, [pathname]);
   const openMenu = () => {
     setIsMenu(true);
   };
@@ -19,14 +22,6 @@ const Header = () => {
     setIsMenu(false);
   };
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-  // useEffect(() => {
-  //   if (pathname) {
-  //     setCurrentPage(currentPage);
-  //   }
-  // }, [currentPage]);
   return (
     <div className="header">
       {/* mobile header */}
@@ -49,7 +44,7 @@ const Header = () => {
               {navs.map((item, index) => (
                 <li
                   className={
-                    currentPage === item
+                    currentPage === `/${item}`
                       ? `border-b-2 pb-[70px]`
                       : "flex gap-3  "
                   }
@@ -58,7 +53,6 @@ const Header = () => {
                   {" "}
                   <Link
                     className="flex gap-3  mt-3"
-                    onClick={() => handlePageChange(`${item}`)}
                     // onChange={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >

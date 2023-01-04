@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/shared/logo.svg";
 import Hamburger from "../assets/shared/icon-hamburger.svg";
 import Close from "../assets/shared/icon-close.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import navs from "../lib/navs";
 
 const Header = () => {
+  const { pathname } = useLocation();
   const [currentPage, setCurrentPage] = useState("/");
+  const [style, setStyle] = useState(false);
+
   const [isMenu, setIsMenu] = useState(false);
 
   const openMenu = () => {
@@ -16,6 +19,10 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenu(false);
   };
+
+  useEffect(() => {
+    currentPage;
+  }, []);
   return (
     <div className="header">
       {/* mobile header */}
@@ -33,7 +40,7 @@ const Header = () => {
               {navs.map((item, index) => (
                 <li
                   className={
-                    currentPage === `${item}`
+                    currentPage === item
                       ? `border-b-2 pb-[70px]`
                       : "flex gap-3  "
                   }
@@ -43,7 +50,6 @@ const Header = () => {
                   <Link
                     className="flex gap-3  mt-3"
                     onClick={() => setCurrentPage(`${item}`)}
-                    onLoad={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >
                     <span className="font-bold"> 0{index}</span>

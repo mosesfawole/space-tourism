@@ -23,7 +23,12 @@ const Header = () => {
     <div className="header">
       {/* mobile header */}
       <div className=" flex justify-between items-center p-6 md:p-0 md:pt-10  ">
-        <div className="left md:px-6">
+        <div className="left md:hidden md:px-6 cursor-pointer">
+          <Link to="/">
+            <img loading="lazy" src={Logo} alt="logo" />
+          </Link>
+        </div>
+        <div className="left hidden md:flex md:px-6 ">
           <img loading="lazy" src={Logo} alt="logo" />
         </div>
         <hr className="hidden md:block absolute left-[167px] z-10 bg-white opacity-[0.25] mix-blend-normal w-[473px]" />
@@ -46,6 +51,7 @@ const Header = () => {
                   <Link
                     className="flex gap-3  mt-3"
                     onClick={() => setCurrentPage(`${item}`)}
+                    onChange={() => setCurrentPage(`${item}`)}
                     to={`/${item}`}
                   >
                     <span className="font-bold"> 0{index}</span>

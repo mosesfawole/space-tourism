@@ -68,7 +68,7 @@ const Crew = () => {
                   <li key={index}>
                     <button
                       onClick={() => setValue(index)}
-                      className={` bg-white w-3 h-3 rounded-full opacity-[.17] 
+                      className={` bg-white w-3 h-3 rounded-full opacity-[.17] hover:bg-white hover:opacity-50 
                     ${index === value && "opacity-100"}
                           `}
                     ></button>

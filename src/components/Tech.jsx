@@ -40,6 +40,8 @@ const Tech = () => {
                   <button
                     onClick={() => setValue(index)}
                     className={`font-bellefair text-base leading-4 text-white w-10 h-10 sm:w-[60px] sm:h-[60px] md:h-20 md:w-20 md:text-3xl sm:text-2xl sm:leading-7 rounded-full border border-[#2b2e36] 
+                    hover:border-solid hover:border-1 hover:border-white 
+
                   ${index === value && "bg-white text-black"}
                         `}
                   >

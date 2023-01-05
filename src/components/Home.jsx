@@ -21,7 +21,7 @@ const Home = () => {
         </div>
         <div className="flex ">
           <Link to="/destination">
-            <button className=" bg-white w-36 h-36 md:w-64 md:h-64 rounded-full outline  hover:outline-[40px] outline-[#ffffff19]    ">
+            <button className=" transition-all delay-150 ease-in-out bg-white w-36 h-36 md:w-64 md:h-64 rounded-full outline  hover:outline-[40px] outline-[#ffffff19]    ">
               <p className="font-bellefair uppercase text-[#0B0D17] text-xl md:text-3xl leading-5">
                 Explore
               </p>

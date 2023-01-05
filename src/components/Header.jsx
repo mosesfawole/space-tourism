@@ -46,8 +46,8 @@ const Header = () => {
                 <li
                   className={
                     currentPage === `/${item}`
-                      ? `border-b-2 pb-[70px]`
-                      : "flex gap-3  "
+                      ? `border-b-2 pb-[70px] `
+                      : "flex gap-3 hover:border-opacity-[.5] hover:border-b-2 hover:pb-[70px] hover:border-white  "
                   }
                   key={index}
                 >

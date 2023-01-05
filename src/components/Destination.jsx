@@ -34,8 +34,8 @@ const Destination = () => {
                 >
                   <button
                     onClick={() => setValue(index)}
-                    className={` tracking-wider text-[#D0D6F9] uppercase pb-2 border-b-2  border-transparent ${
-                      index === value && "border-b-2 border-white"
+                    className={` tracking-wider text-[#D0D6F9] uppercase pb-2 border-b-2 hover:border-opacity-50 hover:border-white border-transparent ${
+                      index === value && "border-b-2 border-white "
                     } `}
                   >
                     {item.name}

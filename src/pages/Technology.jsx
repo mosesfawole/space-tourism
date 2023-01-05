@@ -1,5 +1,3 @@
-import React from "react";
-import Header from "../components/Header";
 import Tech from "../components/Tech";
 
 const Technology = () => {

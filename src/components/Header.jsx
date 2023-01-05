@@ -41,7 +41,7 @@ const Header = () => {
             <img loading="lazy" src={Hamburger} alt="hamburger" />
           </div>
           <div className="lists hidden  right-0 bg-header-bg backdrop-blur-2xl md:flex md:unset">
-            <ul className="flex uppercase gap-12 p-6 h-[96px] text-white text-base font-barlow pr-[125px] pl-[123px] ">
+            <ul className="flex uppercase gap-12 p-6 h-[96px]  w-[830px] sm:w-full text-white text-base font-barlow pr-[125px] pl-[123px] ">
               {navs.map((item, index) => (
                 <li
                   className={

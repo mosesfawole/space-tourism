@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       sm: "600px",
-      md: "768px",
+      md: "900px",
     },
     fontFamily: {
       bellefair: ["Bellefair", "serif"],

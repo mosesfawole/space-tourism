@@ -44,6 +44,7 @@ const Header = () => {
             <ul className="flex uppercase gap-12 p-6 h-[96px]  w-[830px] sm:w-full text-white text-base font-barlow pr-[125px] pl-[123px] ">
               {navs.map((item, index) => (
                 <li
+                  onClick={() => setIsMenu(false)}
                   className={
                     currentPage === `/${item}`
                       ? `border-b-2 pb-[70px] `
@@ -79,6 +80,7 @@ const Header = () => {
             <ul className="flex flex-col uppercase gap-8 mt-16   text-white text-base font-barlow   ">
               {navs.map((item, index) => (
                 <li
+                  onClick={closeMenu}
                   className={
                     currentPage === `${item}`
                       ? ``

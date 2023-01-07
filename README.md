@@ -69,5 +69,5 @@ import image from "../assets/randomImage.webp";
 ## Author
 
 - Website - [Github](https://www.github.com/mosesfawole)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/mosesfawole)
-- Twitter - [@yourusername](https://www.twitter.com/pharwoleh)
+- Frontend Mentor - [mosesfawole](https://www.frontendmentor.io/profile/mosesfawole)
+- Twitter - [pharwoleh](https://www.twitter.com/pharwoleh)

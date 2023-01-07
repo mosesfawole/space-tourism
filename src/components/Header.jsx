@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/shared/logo.svg";
-import Hamburger from "../assets/shared/icon-hamburger.svg";
-import Close from "../assets/shared/icon-close.svg";
+import Logo from "../../public/assets/shared/logo.svg";
+import Hamburger from "../../public/assets/shared/icon-hamburger.svg";
+import Close from "../../public/assets/shared/icon-close.svg";
 import { Link, useLocation } from "react-router-dom";
 import navs from "../lib/navs";
 

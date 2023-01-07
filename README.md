@@ -48,6 +48,19 @@ This was a little bit challenging, but i scaled through haha, I'm most excited a
 - Firstly is the border-bottom to apply on based on the current page
 - To show the mapped items by the index
 - Body to take up background image of each page (really excited about this, all screen sizes has their background images, thanks to [TailwindCss](https://tailwindcss.com))
+- I also learnt how to solve the vercel routing issue, whereby you refresh a page and then it's returns 404 error, this solved ▼
+
+```javascript
+{
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+}
+```
+
+- Also fixed the issue of images breaking down in production, maybe not best practises but i had to change the json file to a js file and then imported the images, e.g ▼
+
+```javascript
+import image from "../assets/randomImage.webp";
+```
 
 ### Useful resources
 

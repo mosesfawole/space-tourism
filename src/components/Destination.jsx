@@ -1,6 +1,5 @@
-import axios from "axios";
 import React, { useState } from "react";
-import data from "../lib/data.json";
+import data from "../lib/data.js";
 const Destination = () => {
   const [planets] = useState(data.destinations);
   const [value, setValue] = useState(0);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import data from "../lib/data.json";
+import data from "../lib/data.js";
 const Tech = () => {
   const [technologies] = useState(data.technology);
   const [value, setValue] = useState(0);

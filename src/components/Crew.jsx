@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "../lib/data";
+import data from "../lib/data.js";
 const Crew = () => {
   const [crews] = useState(data.crew);
   const [value, setValue] = useState(0);

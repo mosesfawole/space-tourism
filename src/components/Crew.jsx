@@ -18,7 +18,7 @@ const Crew = () => {
             </div>
             <div className="">
               <img
-                loading="lazy"
+            
                 className="aspect-square object-contain mx-auto md:w-full md:h-auto "
                 src={images.webp}
                 alt={name}

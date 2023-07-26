@@ -19,7 +19,7 @@ const Tech = () => {
         <div className="top flex flex-col  ">
           <div className="i">
             <img
-              loading="lazy"
+        
               className="md:hidden"
               src={images.landscape}
               alt={name}

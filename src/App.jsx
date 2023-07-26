@@ -36,7 +36,7 @@ const App = () => {
           ? "bg-mobileCrew sm:bg-tabletCrew md:bg-desktopCrew  bg-cover bg-center min-h-screen"
           : currentPage === "technology"
           ? "bg-mobileTech sm:bg-tabletTech md:bg-desktopTech bg-cover bg-center min-h-screen"
-          : ""
+          : "bg-mobile sm:bg-tablet md:bg-desktop bg-center bg-cover min-h-screen"
       }
     >
       <Header />

@@ -1,10 +1,13 @@
-import HomePage from "./pages/HomePage";
+// Import other required dependencies
+import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
-import Destinations from "./pages/Destinations";
-import Crews from "./pages/Crews";
-import Technology from "./pages/Technology";
-import { useEffect, useState } from "react";
+
+// Lazy load the components
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+const Destinations = React.lazy(() => import("./pages/Destinations"));
+const Crews = React.lazy(() => import("./pages/Crews"));
+const Technology = React.lazy(() => import("./pages/Technology"));
 
 const App = () => {
   const { pathname } = useLocation();
@@ -25,6 +28,7 @@ const App = () => {
       setCurrentPage("technology");
     }
   }, [pathname]);
+
   return (
     <div
       className={
@@ -40,17 +44,18 @@ const App = () => {
       }
     >
       <Header />
-      <Routes>
-        {/* <Route path="*" element={} /> */}
-        <Route index exact path="/home" element={<HomePage />} />
-
-        <Route exact path="/home" element={<HomePage />} />
-        <Route path="/destination" element={<Destinations />} />
-        <Route path="/crew" element={<Crews />} />
-        <Route path="/technology" element={<Technology />} />
-      </Routes>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route index exact path="/home" element={<HomePage />} />
+          <Route exact path="/home" element={<HomePage />} />
+          <Route path="/destination" element={<Destinations />} />
+          <Route path="/crew" element={<Crews />} />
+          <Route path="/technology" element={<Technology />} />
+        </Routes>
+      </React.Suspense>
     </div>
   );
 };
 
 export default App;
+  

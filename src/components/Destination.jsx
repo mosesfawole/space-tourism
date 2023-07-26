@@ -17,7 +17,7 @@ const Destination = () => {
               </p>
             </div>
             <img
-              loading="lazy"
+        
               className="w-1/2 sm:w-1/2 md:w-1/3  md:mt-7 mx-auto"
               src={images.webp}
               alt={name}

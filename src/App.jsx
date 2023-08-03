@@ -46,7 +46,7 @@ const App = () => {
       <Header />
       <React.Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route index exact path="/home" element={<HomePage />} />
+          <Route index exact path="/" element={<HomePage />} />
           <Route exact path="/home" element={<HomePage />} />
           <Route path="/destination" element={<Destinations />} />
           <Route path="/crew" element={<Crews />} />
